@@ -1,8 +1,9 @@
 """Public API for OR MuleGraph."""
 
+from .networks import detect_rings
 from .scoring import score_accounts
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 
 def project_info() -> dict[str, str]:
@@ -13,5 +14,5 @@ def project_info() -> dict[str, str]:
     }
 
 
-__all__ = ["project_info", "score_accounts"]
+__all__ = ["detect_rings", "project_info", "score_accounts"]
 

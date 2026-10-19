@@ -12,6 +12,7 @@ Rapid pass-through activity and coordinated counterparties can reveal accounts t
 - Multiple-sender and multiple-recipient factors.
 - Independent windows for each account and currency.
 - Stable alert identifiers, exact decimal arithmetic, and evidence IDs.
+- Shared-counterparty ring detection for coordinated hubs, with time and work budgets.
 - Clear distinction between observed flows and balance/fund attribution.
 - Strict validation, CLI, optional authenticated API, Docker image, and CI.
 
@@ -27,4 +28,4 @@ API: set `OR_API_KEY` to at least 16 characters, run `uvicorn or_mulegraph.api:c
 
 ## Limitations and roadmap
 
-This rule-based prototype is not trained or calibrated on institutional data. It has no peer groups, customer-risk profile, device intelligence, beneficial ownership, supervised learning, streaming state, or false-positive measurement. Next steps are cohort-aware features, graph centrality, event-time streaming, reason-code stability, feedback capture, and precision/recall evaluation on governed labels.
+Set `action` to `rings` to run the coordinated-network detector; its response exposes whether the work budget truncated analysis. This rule-based prototype is not trained or calibrated on institutional data. Next steps are cohort-aware features, event-time streaming, feedback capture, and precision/recall evaluation on governed labels.
